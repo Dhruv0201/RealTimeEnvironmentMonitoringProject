@@ -23,4 +23,4 @@
 - ThingSpeak API: API documentation for accessing and retrieving data from ThingSpeak.
 
 ### Live at
- `https://famous-truffle-2d1b2a.netlify.app/`
+ https://famous-truffle-2d1b2a.netlify.app/
