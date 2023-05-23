@@ -14,13 +14,13 @@
 #define DHTTYPE DHT11
 
 DHT dht(DHTPIN, DHTTYPE);
-const char* ssid = "Galaxy M12 F89B";
-const char* password = "Password";
+const char* ssid = "*********";
+const char* password = "********";
 const char* server = "api.thingspeak.com";
 
 WiFiClient client;
-const char* api_key = "GBB7NOLIC19MW9WI";
-unsigned long myChannelNumber = 2155544; //Your Channel Number (Without
+const char* api_key = "*************";
+unsigned long myChannelNumber = *********; //Your Channel Number (Without
 
 
 void setup() {
