@@ -2,53 +2,55 @@
 <html>
   <head>
     <title>Real-time Environmental Monitoring</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="style.css" />
-    <style>
-      #chart-container {
-        width: 80%;
-        margin: 0 auto;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <div class="container">
-      <h1 class="mt-5 mb-4">Real-time Environmental Monitoring</h1>
+      <h1 class="mt-5 mb-4">REAL TIME-ENVIRONMENT MONITIORING SYSTEM</h1>
+      <h2>Charts</h2>
       <div class="chartcontainer">
         <iframe
+          class="chart"
           width="450"
           height="260"
           style="border: 1px solid #cccccc"
-          src="https://thingspeak.com/channels/2155544/charts/2?bgcolor=%23000000&color=%23ffffff&dynamic=true&results=60&type=line&update=15"
+          src="https://thingspeak.com/channels/2155544/charts/2?bgcolor=%23fffffff&color=%2300000f&dynamic=true&results=60&type=line&update=15"
         ></iframe>
         <iframe
+          class="chart"
           width="450"
           height="260"
           style="border: 1px solid #cccccc"
-          src="https://thingspeak.com/channels/2155544/charts/3?bgcolor=%23000000&color=%23ffffff&dynamic=true&results=60&type=line&update=15"
+          src="https://thingspeak.com/channels/2155544/charts/3?bgcolor=%23fffffff&color=%23000000&dynamic=true&results=60&type=line&update=15"
         ></iframe>
       </div>
-      <h1>Temperature</h1>
-      <iframe
-        width="200"
-        height="200"
-        style="border: 1px solid #cccccc"
-        src="https://thingspeak.com/channels/2155544/widgets/655072"
-      ></iframe>
+      <h2>Temperature</h2>
+      <div class="numcontainer">
+        <iframe
+          width="200"
+          height="200"
+          style="border: 1px solid transparent"
+          src="https://thingspeak.com/channels/2155544/widgets/655072"
+        ></iframe>
+      </div>
 
       <div id="listContainer"></div>
-      <h1>Humidity</h1>
-      <iframe
-        class="ifram"
-        width="200"
-        height="200"
-        style="border: 1px solid #cccccc"
-        src="https://thingspeak.com/channels/2155544/widgets/655073"
-        +
-      ></iframe>
+      <h2>Humidity</h2>
+      <div class="numcontainer">
+        <iframe
+          class="ifram"
+          width="200"
+          height="200"
+          style="border: 1px solid transparent"
+          src="https://thingspeak.com/channels/2155544/widgets/655073"
+          +
+        ></iframe>
+      </div>
       <div id="humidity"></div>
     </div>
   </body>
