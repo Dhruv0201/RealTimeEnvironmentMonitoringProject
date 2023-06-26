@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Real-time Environmental Monitoring</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    /> -->
+    <title>Real time Environmental Monitoring</title>
     <link rel="stylesheet" href="style.css" />
-    <style></style>
   </head>
   <body>
     <div class="container">
-      <h1 class="mt-5 mb-4">REAL TIME-ENVIRONMENT MONITIORING SYSTEM</h1>
-      <h2>Charts</h2>
-      <div class="chartcontainer">
-        <iframe
-          class="chart"
-          width="450"
-          height="260"
-          style="border: 1px solid #cccccc"
-          src="https://thingspeak.com/channels/2155544/charts/2?bgcolor=%23fffffff&color=%2300000f&dynamic=true&results=60&type=line&update=15"
-        ></iframe>
-        <iframe
-          class="chart"
-          width="450"
-          height="260"
-          style="border: 1px solid #cccccc"
-          src="https://thingspeak.com/channels/2155544/charts/3?bgcolor=%23fffffff&color=%23000000&dynamic=true&results=60&type=line&update=15"
-        ></iframe>
-      </div>
+      <h1 class="mt-5 mb-4">REAL TIME ENVIRONMENT MONITIORING SYSTEM</h1>
       <h2>Temperature</h2>
-      <div class="temprature">
+      <div class="chartandvalues">
+        <div class="chartcontainer">
+          <iframe
+            class="chart"
+            width="450"
+            height="260"
+            style="border: 1px solid #cccccc"
+            src="https://thingspeak.com/channels/2155544/charts/2?bgcolor=%23fffffff&color=%2300000f&dynamic=true&results=60&type=line&update=15"
+          ></iframe>
+        </div>
+
         <div class="numcontainer">
           <iframe
             width="200"
@@ -39,12 +27,20 @@
             src="https://thingspeak.com/channels/2155544/widgets/655072"
           ></iframe>
         </div>
-
-        <div id="listContainer"></div>
       </div>
+      <div id="listContainer"></div>
 
       <h2>Humidity</h2>
-      <div class="humidity">
+      <div class="chartandvalues">
+        <div class="chartcontainer">
+          <iframe
+            class="chart"
+            width="450"
+            height="260"
+            style="border: 1px solid #cccccc"
+            src="https://thingspeak.com/channels/2155544/charts/3?bgcolor=%23fffffff&color=%23000000&dynamic=true&results=60&type=line&update=15"
+          ></iframe>
+        </div>
         <div class="numcontainer">
           <iframe
             class="ifram"
@@ -55,14 +51,29 @@
             +
           ></iframe>
         </div>
-        <div id="humidity"></div>
       </div>
+      <div id="humidity"></div>
+      <h2>Air Quality</h2>
+      <div class="chartandvalues">
+        <div class="chartcontainer">
+          <iframe
+            width="450"
+            height="260"
+            style="border: 1px solid #cccccc"
+            src="https://thingspeak.com/channels/2155544/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+          ></iframe>
+        </div>
+        <div class="numcontainer">
+          <iframe
+            width="200"
+            height="200"
+            style="border: 1px solid transparent"
+            src="https://thingspeak.com/channels/2155544/widgets/655267"
+          ></iframe>
+        </div>
+      </div>
+      <div id="airquality"></div>
     </div>
   </body>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </html>

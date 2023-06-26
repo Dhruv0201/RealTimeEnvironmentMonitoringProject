@@ -25,12 +25,18 @@ h2{
 .humidity{
   display: flex;
 }
- #listContainer,#humidity{
+.chartandvalues{
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+ #listContainer,#humidity,#airquality{
     display: flex;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
     overflow-x: auto;
-      overflow-y: hidden;;
+    overflow-y: hidden;;
     margin:  10px 10px ;
     padding: 5px;
     margin-right: 6px;
@@ -38,51 +44,35 @@ h2{
 
  }
 
- #listContainer::-webkit-scrollbar {
+ #listContainer::-webkit-scrollbar,#humidity::-webkit-scrollbar,#airquality::-webkit-scrollbar {
 
     height: 6px;
   }
-  #listContainer::-webkit-scrollbar-track {
+  #listContainer::-webkit-scrollbar-track,#humidity::-webkit-scrollbar-track,#airquality::-webkit-scrollbar-track {
     background-color: #f1f1f1;
   }
 
-  #listContainer::-webkit-scrollbar-thumb {
+  #listContainer::-webkit-scrollbar-thumb ,#humidity::-webkit-scrollbar-thumb,#airquality::-webkit-scrollbar-thumb{
     background-color: #888;
     border-radius: 5px;
   }
 
-  #listContainer::-webkit-scrollbar-thumb:hover {
+  #listContainer::-webkit-scrollbar-thumb:hover, #humidity::-webkit-scrollbar-thumb:hover,#airquality::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
-  #humidity::-webkit-scrollbar {
 
-    height: 4px;
-  }
 ul{
   
     transition: transform 0.3s ease-in-out;
+    list-style: none;
+    font-size: 36px;
   }
 ul:hover{
   transform: scale(1.1);
 }
-  #humidity::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
 
-  #humidity::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 5px;
-  }
-
-  #humidity::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
- ul{
-    list-style: none;
-    font-size: 36px;
- }
 .chartcontainer{
-  width: 100%;
+  width: fit-content;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-color: #fff;
   border-radius: 10px;
@@ -110,11 +100,14 @@ ul:hover{
     display: flex;
   }
 .numcontainer{
+
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-color: #ffffff;
   display: inline-flex;
   border-radius: 10px;
   padding: 5px;
+  height: 250px;
   margin: 10px;
   transition: transform 0.3s ease-in-out;
 }
