@@ -14,13 +14,13 @@
 #define DHTTYPE DHT11
 
 DHT dht(DHTPIN, DHTTYPE);
-const char* ssid = "*********";
-const char* password = "********";
+const char* ssid = "Galaxy M12 F89B";
+const char* password = "Password";
 const char* server = "api.thingspeak.com";
 
 WiFiClient client;
-const char* api_key = "*************";
-unsigned long myChannelNumber = *********; //Your Channel Number (Without
+const char* api_key = "GBB7NOLIC19MW9WI";
+unsigned long myChannelNumber = 2155544; //Your Channel Number (Without
 
 
 void setup() {
@@ -45,6 +45,10 @@ void loop() {
   
    float temperature = dht.readTemperature();  // Read temperature in Celsius
     float humidity = dht.readHumidity(); 
+    int gas_Val = analogRead(A0);
+  Serial.print("Gas Value : ");
+  Serial.println(gas_Val); 
+   Serial.println("_______________");
      Serial.println(temperature);
      
       Serial.println(humidity);
@@ -52,6 +56,7 @@ void loop() {
       
     ThingSpeak.setField(2, temperature);
     ThingSpeak.setField(3,humidity);
+    ThingSpeak.setField(4,gas_Val);
     ThingSpeak.writeFields(myChannelNumber, api_key);
   }
   else {
