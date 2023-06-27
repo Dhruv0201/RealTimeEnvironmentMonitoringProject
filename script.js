@@ -58,11 +58,11 @@ const options = { weekday: "long" };
             humiditycontainer.appendChild(parentItem);
           }
         })
-        fetch("https://thingspeak.com/channels/2155544/field/3.json?results=10").then((response) => response.json()).then((data)=>{
+        fetch("https://thingspeak.com/channels/2155544/field/4.json?results=10").then((response) => response.json()).then((data)=>{
           var airquality = [];
           var created_at = [];
           for(var i = 0;i<data.feeds.length;i++){
-            airquality.push(data.feeds[i].field3);
+            airquality.push(data.feeds[i].field4);
             const date = new Date(data.feeds[i].created_at);
             const day = date.toLocaleDateString("en-Us",options);
             created_at.push(day);
